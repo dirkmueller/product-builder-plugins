@@ -187,6 +187,7 @@ sub createRepositoryMetadata {
     $cmd .= " --excludes=boot/*/*.rpm";
     $cmd .= " --checksum=sha512";
     $cmd .= " --zck";
+    $cmd .= " --general-compress-type=zstd";
     $cmd .= " --no-database";
     $cmd .= " --error-exit-val"; # is not working with old createrepo
     foreach my $repoid (split(/\s+/, $repoids)) {
